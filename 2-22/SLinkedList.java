@@ -55,6 +55,42 @@ public class SLinkedList {
 	return ans;
     }
 
+    public String getFirst() {
+	if (_size == 0) throw new IllegalStateException();
+	return _head.getValue();
+    }
+
+    public String getLast() {
+	if (_size == 0) throw new IllegalStateException();
+	return _tail.getValue();
+    }
+
+    public String get(int x) {
+	if (x < 0 || x >= _size) throw new IndexOutOfBoundsException();
+	Node cur = _head;
+	for (int i = 0; i < x; i++) {
+	    cur = cur.getNext();
+	}
+	return cur.getValue();
+    }	    
+
+    public SLinkedList append(SLinkedList L) {
+	SLinkedList newList = this;
+	if (L.size() > 0) {
+	    newList.addLast(L.removeFirst());
+	    newList.append(L);
+	}
+	return newList;
+    }
+
+    /*
+    public void reverse() {
+	for (int i = 0; i < _size/2; i++) {
+	    Node temp = 
+	}
+    }
+    */
+
     public String toString() {
 	Node cur = _head;
 	String ans = "";
@@ -67,13 +103,11 @@ public class SLinkedList {
     
     public static void main(String[] args) {
 	SLinkedList L = new SLinkedList();
-	L.addLast("Bill");
-	System.out.println(L);
-	L.addLast("Mary");
-	System.out.println(L);
-	L.addLast("Yes");
-	System.out.println(L);
-	L.removeFirst();
+	SLinkedList M = new SLinkedList();
+	L.addLast("a");
+	L.addLast("b");
+	M.addLast("c");
+	L.append(M);
 	System.out.println(L);
 	
     }
