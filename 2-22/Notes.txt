@@ -1,0 +1,9 @@
+Singly linked list -- alternative to an array or arrayList for storing a 
+		      sequence of values
+
+Linked list -- a collection of nodes that has a linear ordering
+
+		Node
+	String "Sue"	"Mary"	"Bill"	null
+	Node	--> 	-->	-->
+		Head		Tail
