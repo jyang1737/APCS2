@@ -1,0 +1,13 @@
+Test
+recursion
+Nodes
+SLinkedList
+
+
+
+Doubly Linked List
+
+Dnode
+Amy	Bill	Carol
+_next	_next 	_next
+_prev	_prev	_prev

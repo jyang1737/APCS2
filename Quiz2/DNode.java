@@ -1,0 +1,69 @@
+public class DNode {
+
+    private GameEntry _value;
+    private DNode _prev, _next;
+
+    public DNode() {
+	_value = new GameEntry();
+	_prev = null;
+	_next = null;
+    }
+
+
+    public DNode(GameEntry value, DNode prev, DNode next) {
+	_value = value;
+	_prev = prev;
+	_next = next;
+    }
+    
+    public GameEntry getValue() {
+	return _value;
+    }
+
+    public DNode getNext() {
+	return _next;
+    }
+
+    public DNode getPrev() {
+	return _prev;
+    }
+
+    public GameEntry setValue(GameEntry newValue) {
+	GameEntry ans = getValue();
+	_value = newValue;
+	return ans;
+    }
+
+    public DNode setNext(DNode newNext) {
+	DNode ans = getNext();
+	_next = newNext;
+	return ans;
+    }
+
+    public DNode setPrev(DNode newPrev) {
+	DNode ans = getPrev();
+	_prev = newPrev;
+	return ans;
+    }
+    
+    public String toString() {
+	return _value.toString();
+    }
+
+    public static void main(String[] args) {
+	DNode a = new DNode(GameEntry.randomEntry(3,10), null, null);
+	DNode b = new DNode(GameEntry.randomEntry(3,10), a, null);
+	DNode c = new DNode(GameEntry.randomEntry(3,10), b, null);
+	a.setNext(b);
+	b.setNext(c);
+	DNode current = a;
+	while (current != null) {
+	    System.out.println(current);
+	    current = current.getNext();
+	}
+
+    }
+
+
+
+}
