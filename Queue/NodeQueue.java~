@@ -1,0 +1,26 @@
+public class NodeQueue<E> implements Queue<E> {
+
+    private Node<E> _queueHead;
+    private int _size;
+
+    public NodeQueue() {
+	_queueHead = new Node(null, null);
+	_size = 0;
+    }
+
+    public int size() {
+	return _size;
+    }
+    
+    public boolean isEmpty() {
+	return size() == 0;
+    }
+
+    public void enqueue(E e) throws FullQueueException {
+	_queueHead.setNext(e);
+	_queueHead = _queueHead.getNext();
+	
+    }
+
+
+}

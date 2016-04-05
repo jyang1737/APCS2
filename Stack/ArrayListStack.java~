@@ -1,0 +1,17 @@
+public class ArrayStackList<E> implements Stack<E> {
+    
+    public String toString() {
+	return _stack.toString();
+    }
+
+    public st
+
+
+
+
+
+
+
+
+
+}

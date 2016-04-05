@@ -1,0 +1,46 @@
+public class Node<E>{
+
+    private String _value;
+    private Node<E> _next;
+
+   
+    public Node<E> (String val, Node<E> next){
+	_value = val;
+	_next = next;
+    }
+
+    public String getValue(){
+	return _value;
+    }
+
+    public Node<E> getNext(){
+	return _next;
+    }
+
+    public Node<E> setNext(Node<E> t){
+	Node<E> ans = _next;
+	_next = t;
+	return ans;
+    }
+
+    public String setValue(String newValue){
+	String ans = _value;
+	_value = newValue;
+	return ans;
+    }
+
+
+    public String toString(){
+	return _value;
+    }
+
+    public static void main(String [] args){
+	Node a = new Node("Bob", null);
+	Node b = new Node("Sam",a);
+	System.out.println(a);
+	System.out.println(b);
+	System.out.println(a.getNext());
+	System.out.println(b.getNext());
+    }
+
+}
