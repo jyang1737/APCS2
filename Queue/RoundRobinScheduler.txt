@@ -1,0 +1,7 @@
+Round Robin Scheduler
+
+A popular use of a queue structure is ot implement a RRS where we iterate through a collection of elements in a circular form and "service" each element by performing a given action on it. 
+
+1. e <- Q.dequeue()
+2. service element
+3. Q.enqueue(e)

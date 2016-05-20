@@ -1,0 +1,32 @@
+public class HotPotato {
+
+    private Queue q;
+    
+    
+    public HotPotato() {
+	q = new NodeQueue();
+        q.enqueue("Yes");
+	q.enqueue("Same");
+	q.enqueue("Smae");
+	q.enqueue("Sam-E");
+    }
+
+    public static void play() {
+	boolean potato = false;
+	while (!potato) {
+	    double x = Math.random();
+	    e = q.dequeue();
+	    q.enqueue(e);
+	    if (x > .5) potato = true;
+	}
+    }
+
+    public static void main(String[] args) {
+	
+
+	
+    }
+
+
+
+}

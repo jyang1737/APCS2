@@ -1,6 +1,6 @@
-public class EmptyStackException extends RuntimeException {
+public class EmptyQueueException extends RuntimeException {
 
-    public EmptyStackException(String error) {
+    public EmptyQueueException(String error) {
 	super(error);
     }
 
